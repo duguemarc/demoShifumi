@@ -1,0 +1,104 @@
+
+.game-result {
+  text-align: center;
+  padding: 2rem;
+
+  &__choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  &__choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__player-name {
+    color: #2d3748;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  &__choice-display {
+    font-size: 4rem;
+    padding: 1rem;
+    background: linear-gradient(145deg, #f7fafc, #edf2f7);
+    border-radius: 20px;
+    border: 3px solid #e2e8f0;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__vs {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a5568;
+  }
+
+  &__message {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+
+    &--win {
+      background: linear-gradient(145deg, #c6f6d5, #9ae6b4);
+      color: #22543d;
+    }
+
+    &--lose {
+      background: linear-gradient(145deg, #fed7d7, #feb2b2);
+      color: #742a2a;
+    }
+
+    &--draw {
+      background: linear-gradient(145deg, #e2e8f0, #cbd5e0);
+      color: #2d3748;
+    }
+  }
+
+  &__next-round-button {
+    padding: 1.2rem 2rem;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .game-result {
+    padding: 1rem;
+
+    &__choices {
+      gap: 1rem;
+    }
+
+    &__choice-display {
+      font-size: 3rem;
+      min-width: 100px;
+    }
+
+    &__message {
+      font-size: 1.4rem;
+      padding: 0.8rem 1rem;
+    }
+  }
+}

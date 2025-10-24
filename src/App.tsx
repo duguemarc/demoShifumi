@@ -1,11 +1,11 @@
 import './App.css'
 import {GameBoard} from "./components/GameBoard/GameBoard.tsx";
-import {useGame} from "./hooks/useGameLogic.ts";
+import {useGame} from "./hooks/useGame.ts";
 import {GameSetup} from "./components/GameSetup/GameSetupComponent.tsx";
 import type {GameMode} from "./types/GameLogicTypes.ts";
 
 function App() {
-    const { gameState, startGame, makeChoice } = useGame();
+    const { gameState, startGame, makeChoice, resetGame, resetRound } = useGame();
 
     const handleStartGame = (mode: GameMode, player1Name: string, player2Name?: string) => {
         startGame(mode, player1Name, player2Name);
@@ -19,7 +19,7 @@ function App() {
     return (
         <>
 
-            <GameBoard gameState={gameState} onMakeChoice={makeChoice} />
+            <GameBoard onResetGame={resetGame} onResetRound={resetRound} gameState={gameState} onMakeChoice={makeChoice} />
     </>
   )
 }

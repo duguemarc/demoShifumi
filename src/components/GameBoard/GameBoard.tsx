@@ -1,17 +1,22 @@
 import React from 'react';
-import { CHOICES } from '../../utils/gameLogic';
+import {CHOICES} from '../../utils/gameLogic';
 import './style/GameBoard.scss';
 import type {Choice, GameState} from "../../types/GameLogicTypes.ts";
 import {ChoiceButton} from "../common/ChoiceButton.tsx";
+import {GameResult} from "./result/GameBoardResult.tsx";
 
 interface GameBoardProps {
     gameState: GameState;
     onMakeChoice: (playerId: string, choice: Choice) => void;
+    onResetRound: () => void;
+    onResetGame: () => void;
 }
 
 export const GameBoard: React.FC<GameBoardProps> = ({
                                                         gameState,
                                                         onMakeChoice,
+                                                        onResetRound,
+
                                                     }) => {
     const { mode, currentRound, player1, player2 } = gameState;
     const isPlayer2Turn = mode === 'pvp' && currentRound.player1Choice && !currentRound.player2Choice;
@@ -36,8 +41,12 @@ export const GameBoard: React.FC<GameBoardProps> = ({
 
     <div className="game-board__content">
         {showResult ? (
-            <div>Résultat</div>
-) : (
+            <GameResult
+                gameState={gameState}
+                onResetRound={onResetRound}
+            />
+        ) : (
+
         <>
             <div className="game-board__player-section">
         <h3 className="game-board__player-name">{player1.name}</h3>

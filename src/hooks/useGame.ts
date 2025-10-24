@@ -85,6 +85,22 @@ export const useGame = () => {
     });
   }, []);
 
+  const resetRound = useCallback(() => {
+    setGameState(prev => ({
+      ...prev,
+      currentRound: {
+        player1Choice: null,
+        player2Choice: null,
+        result: null,
+      },
+    }));
+  }, []);
+
+  const resetGame = useCallback(() => {
+    setGameState(initialGameState);
+  }, []);
+
+
 
   const updatePlayerName = useCallback((playerId: string, name: string) => {
     setGameState(prev => ({
@@ -98,5 +114,7 @@ export const useGame = () => {
     startGame,
     makeChoice,
     updatePlayerName,
+    resetGame,
+    resetRound
   };
 };
