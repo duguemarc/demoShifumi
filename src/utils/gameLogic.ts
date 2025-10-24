@@ -32,6 +32,7 @@ export const determineWinner = (player1Choice: Choice, player2Choice: Choice): G
   return winningCombinations[player1Choice] === player2Choice ? 'win' : 'lose';
 };
 
+// Message de résultat
 export const getResultMessage = (result: GameResult, playerName: string): string => {
   switch (result) {
     case 'win':
