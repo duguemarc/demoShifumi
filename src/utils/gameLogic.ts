@@ -36,11 +36,11 @@ export const determineWinner = (player1Choice: Choice, player2Choice: Choice): G
 export const getResultMessage = (result: GameResult, playerName: string): string => {
   switch (result) {
     case 'win':
-      return `🎉 ${playerName} gagne !`;
+      return `${playerName} gagne !`;
     case 'lose':
-      return `😢 ${playerName} perd !`;
+      return `${playerName} perd !`;
     case 'draw':
-      return `🤝 Égalité !`;
+      return `Égalité !`;
     default:
       return '';
   }
