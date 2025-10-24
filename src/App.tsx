@@ -1,21 +1,25 @@
 import './App.css'
-import {ChoiceButton} from "./components/common/ChoiceButton.tsx";
-import {CHOICES} from "./utils/gameLogic.ts";
+import {GameBoard} from "./components/GameBoard/GameBoard.tsx";
+import {useGame} from "./hooks/useGameLogic.ts";
+import {GameSetup} from "./components/GameSetup/GameSetupComponent.tsx";
+import type {GameMode} from "./types/GameLogicTypes.ts";
 
 function App() {
+    const { gameState, startGame, makeChoice } = useGame();
 
-  return (
-    <>
-        <div className="game-board__choices">
-            {CHOICES.map((choice) => (
-                <ChoiceButton
-                    key={choice}
-                    choice={choice!}
-                    onClick={() => console.log(choice)}
-                    disabled={false}
-                />
-            ))}
-        </div>
+    const handleStartGame = (mode: GameMode, player1Name: string, player2Name?: string) => {
+        startGame(mode, player1Name, player2Name);
+    };
+
+
+    if (!gameState.isGameActive) {
+        return <GameSetup onStartGame={handleStartGame} />;
+    }
+
+    return (
+        <>
+
+            <GameBoard gameState={gameState} onMakeChoice={makeChoice} />
     </>
   )
 }
