@@ -1,0 +1,110 @@
+.game-history {
+  margin-top: 2rem;
+
+  &__toggle {
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(45deg, #4a5568, #2d3748);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    display: block;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  &__content {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  &__title {
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+  }
+
+  &__rounds {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  &__round {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f7fafc;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+  }
+
+  &__round-number {
+    font-weight: 600;
+    color: #4a5568;
+    min-width: 100px;
+  }
+
+  &__choices {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    justify-content: center;
+  }
+
+  &__choice {
+    font-size: 1.5rem;
+  }
+
+  &__vs {
+    color: #a0aec0;
+    font-weight: 600;
+  }
+
+  &__winner {
+    font-weight: 600;
+    color: #38a169;
+    min-width: 100px;
+    text-align: right;
+
+    &--draw {
+      color: #4a5568;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .game-history {
+    &__round {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+
+    &__round-number,
+    &__winner {
+      min-width: auto;
+      text-align: center;
+    }
+
+    &__choices {
+      gap: 0.5rem;
+    }
+
+    &__choice {
+      font-size: 1.2rem;
+    }
+  }
+}

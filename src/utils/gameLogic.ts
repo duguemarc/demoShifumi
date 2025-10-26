@@ -3,9 +3,9 @@ import type {Choice, GameResult} from "../types/GameLogicTypes.ts";
 export const CHOICES: Choice[] = ['rock', 'paper', 'scissors'];
 
 export const CHOICE_LABELS = {
-  rock: '🪨 Pierre',
-  paper: '📄 Papier',
-  scissors: '✂️ Ciseaux',
+  rock: 'Pierre',
+  paper: 'Papier',
+  scissors: 'Ciseaux',
 };
 
 export const getRandomChoice = (): Choice => {

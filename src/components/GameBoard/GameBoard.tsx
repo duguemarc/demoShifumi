@@ -2,9 +2,9 @@ import React from 'react';
 import {CHOICES} from '../../utils/gameLogic';
 import './style/GameBoard.scss';
 import type {Choice, GameState} from "../../types/GameLogicTypes.ts";
-import {ChoiceButton} from "../common/ChoiceButton.tsx";
 import {GameResult} from "./result/GameBoardResult.tsx";
 import {ScoreBoard} from "./scoreboard/ScoreBoard.tsx";
+import {ChoiceButton} from "../common/ChoiceButton.tsx";
 
 interface GameBoardProps {
     gameState: GameState;
