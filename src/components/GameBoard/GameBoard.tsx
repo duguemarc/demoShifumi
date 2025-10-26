@@ -4,6 +4,7 @@ import './style/GameBoard.scss';
 import type {Choice, GameState} from "../../types/GameLogicTypes.ts";
 import {ChoiceButton} from "../common/ChoiceButton.tsx";
 import {GameResult} from "./result/GameBoardResult.tsx";
+import {ScoreBoard} from "./scoreboard/ScoreBoard.tsx";
 
 interface GameBoardProps {
     gameState: GameState;
@@ -16,6 +17,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({
                                                         gameState,
                                                         onMakeChoice,
                                                         onResetRound,
+    onResetGame
 
                                                     }) => {
     const { mode, currentRound, player1, player2 } = gameState;
@@ -36,8 +38,12 @@ export const GameBoard: React.FC<GameBoardProps> = ({
 
     return (
         <div className="game-board">
-        <div className="game-board__header">
-    </div>
+            <div className="game-board__header">
+                <ScoreBoard player1={player1} player2={player2} />
+                <button onClick={onResetGame} className="game-board__reset-button">
+                    Nouvelle partie
+                </button>
+            </div>
 
     <div className="game-board__content">
         {showResult ? (

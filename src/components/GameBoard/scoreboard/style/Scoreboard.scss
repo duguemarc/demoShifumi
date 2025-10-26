@@ -1,0 +1,52 @@
+.scoreboard {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  gap: 2rem;
+
+  &__player {
+    text-align: center;
+    flex: 1;
+  }
+
+  &__name {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  &__score {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3748;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  &__separator {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #a0aec0;
+  }
+}
+
+@media (max-width: 768px) {
+  .scoreboard {
+    padding: 1rem;
+    gap: 1rem;
+
+    &__name {
+      font-size: 1rem;
+    }
+
+    &__score {
+      font-size: 1.5rem;
+    }
+  }
+}
