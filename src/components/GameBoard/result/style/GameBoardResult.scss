@@ -18,6 +18,11 @@
     align-items: center;
     gap: 1rem;
   }
+  &__choice-icon {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+  }
 
   &__player-name {
     color: #2d3748;
@@ -27,14 +32,15 @@
 
   &__choice-display {
     font-size: 4rem;
-    padding: 1rem;
+    padding: 1rem 3rem;
     background: linear-gradient(145deg, #f7fafc, #edf2f7);
     border-radius: 20px;
     border: 3px solid #e2e8f0;
-    min-width: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 400px;
+    height: 300px;
   }
 
   &__vs {

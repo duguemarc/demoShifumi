@@ -44,8 +44,8 @@ describe('gameLogic', () => {
 
   describe('getResultMessage', () => {
     it('should return correct messages for different results', () => {
-      expect(getResultMessage('win', 'Alice')).toBe('Alice gagne !');
-      expect(getResultMessage('lose', 'Bob')).toBe('Bob perd !');
+      expect(getResultMessage('win', 'Alice')).toBe('Alice a gagné !');
+      expect(getResultMessage('lose', 'Bob')).toBe('Bob a perdu !');
       expect(getResultMessage('draw', 'Charlie')).toBe('Égalité !');
     });
   });

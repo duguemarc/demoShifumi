@@ -21,7 +21,7 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStartGame }) => {
   return (
     <div className="game-setup">
       <div className="game-setup__container">
-        <h1 className="game-setup__title">🎮 Pierre Papier Ciseaux</h1>
+        <h1 className="game-setup__title">Pierre Papier Ciseaux</h1>
         
         <form onSubmit={handleSubmit} className="game-setup__form">
           <div className="game-setup__mode-selection">
@@ -88,8 +88,7 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStartGame }) => {
             type="submit"
             className="game-setup__start-button"
             disabled={!player1Name.trim() || (mode === 'pvp' && !player2Name.trim())}
-          >
-            🚀 Commencer la partie
+          >Commencer la partie
           </button>
         </form>
       </div>

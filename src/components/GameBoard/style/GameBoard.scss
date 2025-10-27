@@ -15,10 +15,12 @@
   &__reset-button {
     padding: 0.8rem 1.5rem;
     background: #e53e3e;
+    height: 50px;
     color: white;
     border: none;
     border-radius: 10px;
     font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
     transition: transform 0.3s ease;
 
