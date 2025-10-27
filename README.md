@@ -31,7 +31,7 @@ Un jeu interactif de Pierre Papier Ciseaux (Shifumi) où vous pouvez affronter u
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/[votre-username]/demoshifumi.git
+git clone https://github.com/duguemarc/demoShifumi.git
 
 # Accéder au répertoire
 cd demoshifumi
