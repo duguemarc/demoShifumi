@@ -15,6 +15,8 @@ function App() {
     startGame(mode, player1Name, player2Name);
   };
 
+  const toggleHistory = () => setShowHistory(!showHistory);
+
   return (
     <div className="app">
       <ParallaxBackground withAnimation={!gameState.isGameActive} />
@@ -35,7 +37,7 @@ function App() {
             player1={gameState.player1}
             player2={gameState.player2}
             isVisible={showHistory}
-            onToggle={() => setShowHistory(!showHistory)}
+            onToggle={toggleHistory}
           />
         </>
       )}

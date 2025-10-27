@@ -17,7 +17,7 @@ export const ScissorsIcon: React.FC<IconProps> = ({ className, height, width }) 
     role="img"
     aria-label="Icône papier"
 >
-  <style>.a{'{fill:#0c7ceb}'}</style>
+  <style>.a{'{fill:white}'}</style>
   <path
       fillRule="evenodd"
       className="a"

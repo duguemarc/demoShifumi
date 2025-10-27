@@ -36,7 +36,7 @@ export const GameResult: React.FC<GameResultProps> = ({ gameState, onResetRound 
       <div className="game-result__choices">
         <div className="game-result__choice">
           <h3 className="game-result__player-name">{player1.name}</h3>
-          <div className="game-result__choice-display">
+          <div className={`game-result__choice-display ${currentRound.player1Choice || ''}`}>
               <IconChoicePlayer1/>
           </div>
         </div>
@@ -45,7 +45,7 @@ export const GameResult: React.FC<GameResultProps> = ({ gameState, onResetRound 
 
         <div className="game-result__choice">
           <h3 className="game-result__player-name">{player2.name}</h3>
-          <div className="game-result__choice-display">
+            <div className={`game-result__choice-display ${currentRound.player2Choice || ''}`}>
               <IconChoicePlayer2/>
           </div>
         </div>
