@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import './style/ParallaxBackground.scss';
 
 // Import des assets
-import Layer30 from '../../assets/Layer 30.svg';
-import Layer31 from '../../assets/Layer 31.svg';
-import Layer32 from '../../assets/Layer 32.svg';
-import Layer33 from '../../assets/Layer 33.svg';
-import Layer34 from '../../assets/Layer 34.svg';
-import Layer35 from '../../assets/Layer 35.svg';
-import Layer36 from '../../assets/Layer 36.svg';
+import Layer1 from '../../assets/Layer1.svg';
+import Layer2 from '../../assets/Layer2.svg';
+import Layer3 from '../../assets/Layer3.svg';
+import Layer4 from '../../assets/Layer4.svg';
+import Layer5 from '../../assets/Layer5.svg';
+import Layer6 from '../../assets/Layer6.svg';
+import Layer7 from '../../assets/Layer7.svg';
 
 interface Layer {
   id: number;
@@ -30,49 +30,49 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({ withAnim
   const layers: Layer[] = [
     {
       id: 30,
-      src: Layer30,
+      src: Layer1,
       zIndex: 30,
       speed: 0.2,
       direction: -1, // Sens inverse
     },
     {
       id: 31,
-      src: Layer31,
+      src: Layer2,
       zIndex: 31,
       speed: 0.2,
       direction: -1, // Sens inverse
     },
     {
       id: 32,
-      src: Layer32,
+      src: Layer3,
       zIndex: 32,
       speed: 0.5,
       direction: -1, // Sens inverse
     },
     {
       id: 33,
-      src: Layer33,
+      src: Layer4,
       zIndex: 33,
       speed: 0.5,
       direction: -1, // Sens inverse
     },
     {
       id: 34,
-      src: Layer34,
+      src: Layer5,
       zIndex: 34,
       speed: 0.5,
       direction: -1, // Sens inverse
     },
     {
       id: 35,
-      src: Layer35,
+      src: Layer6,
       zIndex: 35,
       speed: 0.7,
       direction: 1, // Sens normal
     },
     {
       id: 36,
-      src: Layer36,
+      src: Layer7,
       zIndex: 36,
       speed: 0.7,
       direction: 1, // Sens normal
